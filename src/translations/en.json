@@ -1,0 +1,192 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Meryem Rouimi",
+    "title": "Computer Engineering Student",
+    "subtitle": "Software Testing & Quality Assurance",
+    "description": "Future Computer and Network Engineer, I specialize in Software Testing and Quality Assurance. Passionate about Data and AI, I develop innovative solutions.",
+    "contactButton": "Contact me",
+    "experienceButton": "View my experiences",
+    "downloadCV": "Download my CV"
+  },
+  "about": {
+    "sectionTitle": "About Me",
+    "sectionSubtitle": "Discover my journey, skills and passion for technological innovation",
+    "title": "Who am I?",
+    "description": "Future Computer and Network Engineer, I specialize in Software Testing and Quality Assurance.",
+    "description2": "Passionate about Data and AI, I develop innovative solutions.",
+    "softSkills": "Soft Skills",
+    "softSkillsList": [
+      "Time management & adaptability",
+      "Public speaking",
+      "Open-mindedness & continuous learning",
+      "Teamwork",
+      "Problem-solving",
+      "Effective communication"
+    ],
+    "personalInfo": "Personal Information",
+    "fullName": "Full name",
+    "age": "22 years old",
+    "ageLabel": "Age",
+      "location": "Rabat, Morocco",
+    "locationLabel": "Location",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "education": "Education",
+    "degree": "State Engineering Degree in Computer Science and Networking",
+    "field": "Computer Science and Networking",
+    "school": "Moroccan School of Engineering Sciences (EMSI)",
+    "baccalaureat": "Baccalaureate",
+    "physicsChemistry": "Physics-Chemistry Sciences",
+    "babElKheir": "Bab El Kheir School",
+    "temara": "Temara",
+    "mention": "Very Good Mention",
+    "languages": "Languages",
+    "arabic": "Arabic",
+    "french": "French",
+    "english": "English",
+    "native": "Native language",
+    "level": "Level",
+    "certifications": "Certifications",
+    "oracleCert": "Oracle Administration SQL (1Z0-082)",
+    "courseraEmsi": "Coursera & EMSI Trainings"
+  },
+  "experience": {
+    "title": "My Experience",
+    "subtitle": "Discover my professional journey and the projects I worked on",
+    "description": "Project Description",
+    "missions": "Completed Missions",
+    "technologies": "Technologies Used",
+    "periods": {
+      "optimgov": "July - August 2025",
+      "oncf": "July - August 2024",
+      "cmais": "July 2022"
+    },
+    "optimgov": {
+      "position": "Application Internship",
+      "description": "Design and development of an internal telephony management module for the municipality of Marrakech. This module integrates into the municipality's global information system and aims to optimize internal communication and telephone service management.",
+      "missions": [
+        "Analysis of the detailed functional specifications document",
+        "Design and UML modeling (use cases, classes, sequences)",
+        "Module development using Spring Boot/Angular",
+        "Development of statistical dashboards and automation of certain tasks",
+        "Participation in various Agile methodology ceremonies (Scrum)"
+      ]
+    },
+    "oncf": {
+      "position": "Application Internship",
+      "description": "Development of an automated dashboard for tracking ticket sales.",
+      "missions": [
+        "Monitoring and exploitation of indicators provided by the company (KPI)",
+        "Design and implementation of an interactive dashboard",
+        "Generation of fictitious data to preserve confidentiality"
+      ]
+    },
+    "cmais": {
+      "position": "Observation Internship",
+      "description": "Discovery of data analysis methods and initiation to quality control practices within the framework of market studies.",
+      "missions": [
+        "Observation of the data collection and validation process",
+        "Simple verification of data consistency (e.g. comparison of expected/actual values)",
+        "Participation in the preparation of reports and summaries"
+      ]
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Discover the projects I developed during my academic journey",
+    "features": "Main Features",
+    "technologies": "Technologies",
+    "status": "Completed",
+    "moreFeatures": "more features",
+    "categories": {
+      "webApp": "Web Application",
+      "desktopApp": "Desktop Application"
+    },
+    "project1": {
+      "title": "PFA Management Platform",
+      "description": "Development of a complete platform for managing End-of-Year Projects (PFA) with an intuitive user interface and real-time tracking system.",
+      "features": [
+        "Responsive user interface",
+        "User and role management",
+        "Real-time project tracking",
+        "Notification system",
+        "Analytical dashboards"
+      ]
+    },
+    "project2": {
+      "title": "Desktop Application - Library Management",
+      "description": "Distributed desktop application for comprehensive library management with a lending system, user management, and book inventory.",
+      "features": [
+        "Intuitive graphical interface",
+        "Book and user management",
+        "Lending and return system",
+        "Advanced search",
+        "Reports and statistics"
+      ]
+    },
+    "project3": {
+      "title": "Stock Management Website - Parapharmacy",
+      "description": "Web application for managing a parapharmacy's stock with product tracking, low stock alerts, and report generation.",
+      "features": [
+        "Complete stock management",
+        "Low stock alerts",
+        "Report generation",
+        "Administration interface",
+        "Category system"
+      ]
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies and tools I master to create innovative solutions",
+    "skillsIn": "Skills in",
+    "levels": {
+      "beginner": "Beginner",
+      "expert": "Expert"
+    },
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "DBMS",
+      "tools": "Tools",
+      "mobile": "Mobile"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Feel free to contact me to discuss projects, collaborations, or opportunities",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "infoTitle": "Contact Information",
+    "socialTitle": "Social Networks",
+    "quickMessageTitle": "Quick Message",
+    "quickMessageSubtitle": "You can also send me a direct message on LinkedIn or Instagram for a faster response!",
+    "form": {
+      "title": "Send me a message",
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I will reply to you soon.",
+      "error": "An error occurred while sending the message. Please try again or contact me directly by email.",
+      "successTitle": "Success",
+      "errorTitle": "Error"
+    }
+  }
+}

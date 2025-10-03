@@ -1,0 +1,192 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Salut, je suis",
+    "name": "Meryem Rouimi",
+    "title": "Étudiante en Ingénierie Informatique",
+    "subtitle": "Testing Logiciel & Assurance Qualité",
+    "description": "Future ingénieure en informatique et réseaux, je me spécialise en Testing logiciel et Assurance Qualité. Passionnée par la Data et l'IA, je développe des solutions innovantes.",
+    "contactButton": "Me contacter",
+    "experienceButton": "Voir mes expériences",
+    "downloadCV": "Télécharger mon CV"
+  },
+  "about": {
+    "sectionTitle": "À propos de moi",
+    "sectionSubtitle": "Découvrez mon parcours, mes compétences et ma passion pour l'innovation technologique",
+    "title": "Qui suis-je ?",
+    "description": "Future ingénieure en informatique et réseaux, je me spécialise en Testing logiciel et Assurance Qualité.",
+    "description2": "Passionnée par la Data et l'IA, je développe des solutions innovantes.",
+    "softSkills": "Soft Skills",
+    "softSkillsList": [
+      "Gestion du temps & adaptabilité",
+      "Prise de parole en public",
+      "Ouverture d'esprit & apprentissage continu",
+      "Travail en équipe",
+      "Résolution de problèmes",
+      "Communication efficace"
+    ],
+    "personalInfo": "Informations personnelles",
+    "fullName": "Nom complet",
+    "age": "22 ans",
+    "ageLabel": "Âge",
+      "location": "Rabat, Maroc",
+    "locationLabel": "Localisation",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone",
+    "education": "Formation",
+    "degree": "Diplôme d'ingénieur d'État en informatique et réseau",
+    "field": "Informatique et Réseau",
+    "school": "École Marocaine des Sciences de l'Ingénieur (EMSI)",
+    "baccalaureat": "Baccalauréat",
+    "physicsChemistry": "Sciences Physiques-Chimie",
+    "babElKheir": "École Bab El Kheir",
+    "temara": "Temara",
+    "mention": "Mention Très Bien",
+    "languages": "Langues",
+    "arabic": "Arabe",
+    "french": "Français",
+    "english": "Anglais",
+    "native": "Langue maternelle",
+    "level": "Niveau",
+    "certifications": "Certifications",
+    "oracleCert": "Oracle Administration SQL (1Z0-082)",
+    "courseraEmsi": "Formations Coursera & EMSI"
+  },
+  "experience": {
+    "title": "Mon Expérience",
+    "subtitle": "Découvrez mon parcours professionnel et les projets sur lesquels j'ai travaillé",
+    "description": "Description du projet",
+    "missions": "Missions réalisées",
+    "technologies": "Technologies utilisées",
+    "periods": {
+      "optimgov": "Juillet - Août 2025",
+      "oncf": "Juillet - Août 2024",
+      "cmais": "Juillet 2022"
+    },
+    "optimgov": {
+      "position": "Stage d'application",
+      "description": "Conception et développement d'un module de gestion de la téléphonie interne pour la commune de Marrakech. Ce module s'intègre dans le système d'information global de la commune et vise à optimiser la communication interne et la gestion des services téléphoniques.",
+      "missions": [
+        "Analyse du document de spécifications fonctionnelles détaillées",
+        "Conception et modélisation UML (cas d'utilisation, classes, séquences)",
+        "Développement du module en utilisation Spring Boot/Angular",
+        "Développement des tableaux de bord statistiques et automatisation de certaines tâches",
+        "Participation aux différentes cérémonies de la méthodologie Agile (Scrum)"
+      ]
+    },
+    "oncf": {
+      "position": "Stage d'application",
+      "description": "Développement d'un tableau de bord automatisé pour le suivi des ventes de tickets.",
+      "missions": [
+        "Suivi et exploitation des indicateurs fournis par l'entreprise (KPI)",
+        "Conception et mise en place d'un tableau de bord interactif",
+        "Génération de données fictives pour préserver la confidentialité"
+      ]
+    },
+    "cmais": {
+      "position": "Stage d'observation",
+      "description": "Découverte des méthodes d'analyse de données et initiation aux pratiques de contrôle qualité dans le cadre d'études de marché.",
+      "missions": [
+        "Observation du processus de collecte et de validation des données",
+        "Vérification simple de la cohérence des données (ex. comparaison valeurs attendues / réelles)",
+        "Participation à la préparation de rapports et synthèses"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez les projets que j'ai développés au cours de mon parcours académique",
+    "features": "Fonctionnalités principales",
+    "technologies": "Technologies",
+    "status": "Terminé",
+    "moreFeatures": "autres fonctionnalités",
+    "categories": {
+      "webApp": "Web Application",
+      "desktopApp": "Desktop Application"
+    },
+    "project1": {
+      "title": "Plateforme de gestion des PFAs",
+      "description": "Développement d'une plateforme complète pour la gestion des Projets de Fin d'Année (PFA) avec interface utilisateur intuitive et système de suivi en temps réel.",
+      "features": [
+        "Interface utilisateur responsive",
+        "Gestion des utilisateurs et rôles",
+        "Suivi des projets en temps réel",
+        "Système de notifications",
+        "Tableaux de bord analytiques"
+      ]
+    },
+    "project2": {
+      "title": "Application Desktop - Gestion de bibliothèque",
+      "description": "Application desktop distribuée pour la gestion complète d'une bibliothèque avec système de prêt, gestion des utilisateurs et inventaire des livres.",
+      "features": [
+        "Interface graphique intuitive",
+        "Gestion des livres et utilisateurs",
+        "Système de prêt et retour",
+        "Recherche avancée",
+        "Rapports et statistiques"
+      ]
+    },
+    "project3": {
+      "title": "Site de gestion de stock - Parapharmacie",
+      "description": "Application web pour la gestion du stock d'une parapharmacie avec suivi des produits, alertes de stock bas et génération de rapports.",
+      "features": [
+        "Gestion complète du stock",
+        "Alertes de stock bas",
+        "Génération de rapports",
+        "Interface d'administration",
+        "Système de catégories"
+      ]
+    }
+  },
+  "skills": {
+    "title": "Mes Compétences",
+    "subtitle": "Technologies et outils que je maîtrise pour créer des solutions innovantes",
+    "skillsIn": "Compétences en",
+    "levels": {
+      "beginner": "Débutant",
+      "expert": "Expert"
+    },
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "SGBD",
+      "tools": "Outils",
+      "mobile": "Mobile"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "N'hésitez pas à me contacter pour discuter de projets, collaborations ou opportunités",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "infoTitle": "Informations de contact",
+    "socialTitle": "Réseaux sociaux",
+    "quickMessageTitle": "Message rapide",
+    "quickMessageSubtitle": "Vous pouvez aussi m'envoyer un message direct sur LinkedIn ou Instagram pour une réponse plus rapide !",
+    "form": {
+      "title": "Envoyez-moi un message",
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sujet de votre message",
+      "message": "Message",
+      "messagePlaceholder": "Votre message...",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès ! Je vous répondrai bientôt.",
+      "error": "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou me contacter directement par email.",
+      "successTitle": "Succès",
+      "errorTitle": "Erreur"
+    }
+  }
+}

@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Light theme - inversion globale */
+  [data-theme="light"] body {
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+  }
+
+  /* Light theme - inversion intelligente des éléments */
+  [data-theme="light"] h1,
+  [data-theme="light"] h2,
+  [data-theme="light"] h3,
+  [data-theme="light"] h4,
+  [data-theme="light"] h5,
+  [data-theme="light"] h6,
+  [data-theme="light"] p,
+  [data-theme="light"] span,
+  [data-theme="light"] div,
+  [data-theme="light"] section,
+  [data-theme="light"] article,
+  [data-theme="light"] nav,
+  [data-theme="light"] main,
+  [data-theme="light"] header,
+  [data-theme="light"] footer {
+    color: #1a1a1a !important;
+  }
+
+  /* Inversion des éléments avec opacité */
+  [data-theme="light"] .opacity-70 {
+    color: #1a1a1a !important;
+    opacity: 0.7 !important;
+  }
+
+  [data-theme="light"] .opacity-80 {
+    color: #1a1a1a !important;
+    opacity: 0.8 !important;
+  }
+
+  [data-theme="light"] .opacity-60 {
+    color: #1a1a1a !important;
+    opacity: 0.6 !important;
+  }
+
+  /* Inversion des backgrounds */
+  [data-theme="light"] .bg-dark-gray {
+    background-color: #f8f9fa !important;
+  }
+
+  [data-theme="light"] .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, #f8f9fa, #f8f9fa) !important;
+  }
+
+  [data-theme="light"] .bg-gradient-to-r {
+    background: linear-gradient(to right, #f8f9fa, #f8f9fa) !important;
+  }
+
+  /* Inversion des couleurs de texte */
+  [data-theme="light"] .text-accent-white {
+    color: #1a1a1a !important;
+  }
+
+  [data-theme="light"] .text-accent-white\/70 {
+    color: #1a1a1a !important;
+    opacity: 0.7;
+  }
+
+  [data-theme="light"] .text-accent-white\/80 {
+    color: #1a1a1a !important;
+    opacity: 0.8;
+  }
+
+  [data-theme="light"] .text-accent-white\/60 {
+    color: #1a1a1a !important;
+    opacity: 0.6;
+  }
+
+  /* Inversion des bordures */
+  [data-theme="light"] .border-baby-pink\/20 {
+    border-color: rgba(26, 26, 26, 0.2) !important;
+  }
+
+  [data-theme="light"] .border-white\/10 {
+    border-color: rgba(26, 26, 26, 0.1) !important;
+  }
+
+  [data-theme="light"] .border-white\/20 {
+    border-color: rgba(26, 26, 26, 0.2) !important;
+  }
+
+  /* Inversion des effets de verre */
+  [data-theme="light"] .glass-effect {
+    background-color: rgba(26, 26, 26, 0.05) !important;
+    border-color: rgba(26, 26, 26, 0.1) !important;
+  }
+
+  [data-theme="light"] .bg-white\/5 {
+    background-color: rgba(26, 26, 26, 0.05) !important;
+  }
+
+  [data-theme="light"] .bg-white\/10 {
+    background-color: rgba(26, 26, 26, 0.1) !important;
+  }
+
+  /* Inversion des backgrounds avec opacité */
+  [data-theme="light"] .bg-dark-gray\/90 {
+    background-color: rgba(248, 249, 250, 0.9) !important;
+  }
+
+  [data-theme="light"] .bg-dark-gray\/95 {
+    background-color: rgba(248, 249, 250, 0.95) !important;
+  }
+
+  [data-theme="light"] .bg-dark-gray\/50 {
+    background-color: rgba(248, 249, 250, 0.5) !important;
+  }
+
+  /* ===== BOUTONS ET ÉLÉMENTS INTERACTIFS ===== */
+  
+  /* Boutons avec gradient rose - garder la couleur en light mode */
+  [data-theme="light"] .bg-gradient-to-r.from-baby-pink.to-light-pink {
+    background: linear-gradient(to right, #f8b4d1, #fce4ec) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* Boutons glass-effect avec fond rose clair */
+  [data-theme="light"] .glass-effect {
+    background-color: rgba(248, 180, 209, 0.1) !important;
+    border-color: rgba(248, 180, 209, 0.3) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* Boutons actifs/sélectionnés */
+  [data-theme="light"] button:active,
+  [data-theme="light"] button:focus,
+  [data-theme="light"] .active {
+    background-color: rgba(248, 180, 209, 0.2) !important;
+    border-color: rgba(248, 180, 209, 0.5) !important;
+  }
+
+  /* Boutons hover */
+  [data-theme="light"] button:hover {
+    background-color: rgba(248, 180, 209, 0.15) !important;
+  }
+
+  /* ===== CHAMPS DE FORMULAIRE ===== */
+  
+  /* Inputs et textareas */
+  [data-theme="light"] input,
+  [data-theme="light"] textarea,
+  [data-theme="light"] select {
+    background-color: rgba(248, 180, 209, 0.05) !important;
+    border-color: rgba(248, 180, 209, 0.3) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* Placeholders */
+  [data-theme="light"] input::placeholder,
+  [data-theme="light"] textarea::placeholder {
+    color: rgba(26, 26, 26, 0.6) !important;
+  }
+
+  /* Focus sur les champs */
+  [data-theme="light"] input:focus,
+  [data-theme="light"] textarea:focus,
+  [data-theme="light"] select:focus {
+    background-color: rgba(248, 180, 209, 0.1) !important;
+    border-color: rgba(248, 180, 209, 0.6) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(248, 180, 209, 0.2) !important;
+  }
+
+  /* ===== BOUTONS DE COMPÉTENCES/TECHNOLOGIES ===== */
+  
+  /* Boutons de catégories (Backend, Frontend, etc.) */
+  [data-theme="light"] .bg-baby-pink\/20 {
+    background-color: rgba(248, 180, 209, 0.2) !important;
+    color: #1a1a1a !important;
+  }
+
+  [data-theme="light"] .bg-baby-pink\/10 {
+    background-color: rgba(248, 180, 209, 0.1) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* Boutons de technologies */
+  [data-theme="light"] .bg-light-pink\/10 {
+    background-color: rgba(252, 228, 236, 0.2) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* ===== NAVIGATION ET ONGLETS ===== */
+  
+  /* Onglets actifs */
+  [data-theme="light"] .bg-gradient-to-r.from-baby-pink.to-light-pink {
+    background: linear-gradient(to right, #f8b4d1, #fce4ec) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* ===== ÉLÉMENTS SPÉCIAUX ===== */
+  
+  /* Cartes et conteneurs */
+  [data-theme="light"] .bg-white\/5 {
+    background-color: rgba(248, 180, 209, 0.05) !important;
+  }
+
+  [data-theme="light"] .bg-white\/10 {
+    background-color: rgba(248, 180, 209, 0.1) !important;
+  }
+
+  /* Bordures spéciales */
+  [data-theme="light"] .border-baby-pink {
+    border-color: #f8b4d1 !important;
+  }
+
+  [data-theme="light"] .border-light-pink {
+    border-color: #fce4ec !important;
+  }
+
+  /* ===== ÉLÉMENTS SPÉCIFIQUES ===== */
+  
+  /* Bouton de langue dans la navbar */
+  [data-theme="light"] .bg-baby-pink\/20 {
+    background-color: rgba(248, 180, 209, 0.2) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* Boutons de navigation */
+  [data-theme="light"] .hover\:bg-baby-pink\/30:hover {
+    background-color: rgba(248, 180, 209, 0.3) !important;
+  }
+
+  /* Boutons d'action principaux */
+  [data-theme="light"] .hover-lift {
+    background-color: rgba(248, 180, 209, 0.1) !important;
+    border-color: rgba(248, 180, 209, 0.2) !important;
+  }
+
+  /* Boutons de compétences avec niveaux */
+  [data-theme="light"] .bg-baby-pink\/10 {
+    background-color: rgba(248, 180, 209, 0.15) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* Éléments avec icônes */
+  [data-theme="light"] .text-baby-pink {
+    color: #f8b4d1 !important;
+  }
+
+  [data-theme="light"] .text-light-pink {
+    color: #fce4ec !important;
+  }
+
+  /* Liens et éléments interactifs */
+  [data-theme="light"] a:hover {
+    color: #f8b4d1 !important;
+  }
+
+  /* Messages de succès/erreur */
+  [data-theme="light"] .text-green-500 {
+    color: #10b981 !important;
+  }
+
+  [data-theme="light"] .text-red-500 {
+    color: #ef4444 !important;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+
+  [data-theme="light"] ::-webkit-scrollbar-track {
+    background: #f8f9fa;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #f8b4d1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fce4ec;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-baby-pink to-light-pink bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl;
+  }
+}
