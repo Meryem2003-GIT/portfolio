@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('backend');
+  const [hoveredSkill, setHoveredSkill] = useState(null);
   const sectionRef = useRef(null);
   const { t } = useLanguage();
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,14 +33,14 @@ const Skills = () => {
       icon: '⚙️',
       color: 'from-baby-pink to-light-pink',
       skills: [
-        { name: 'Java', level: 85, icon: '☕' },
-        { name: 'Python', level: 80, icon: '🐍' },
-        { name: 'C#', level: 75, icon: '🔷' },
-        { name: 'C/C++', level: 70, icon: '⚡' },
-        { name: 'Node.js', level: 65, icon: '🟢' },
-        { name: 'Spring Boot', level: 80, icon: '🌱' },
-        { name: 'Django', level: 75, icon: '🎯' },
-        { name: 'ASP.NET', level: 70, icon: '🌐' }
+        { name: 'Java', icon: '☕' },
+        { name: 'Python', icon: '🐍' },
+        { name: 'C#', icon: '🔷' },
+        { name: 'C/C++', icon: '⚡' },
+        { name: 'Node.js', icon: '🟢' },
+        { name: 'Spring Boot', icon: '🌱' },
+        { name: 'Django', icon: '🎯' },
+        { name: 'ASP.NET', icon: '🌐' }
       ]
     },
     frontend: {
@@ -45,12 +48,12 @@ const Skills = () => {
       icon: '🎨',
       color: 'from-light-pink to-baby-pink',
       skills: [
-        { name: 'HTML', level: 90, icon: '🌐' },
-        { name: 'CSS', level: 85, icon: '🎨' },
-        { name: 'JavaScript', level: 80, icon: '⚡' },
-        { name: 'React', level: 75, icon: '⚛️' },
-        { name: 'Angular', level: 70, icon: '🅰️' },
-        { name: 'React Native', level: 65, icon: '📱' }
+        { name: 'HTML', icon: '🌐' },
+        { name: 'CSS', icon: '🎨' },
+        { name: 'JavaScript', icon: '⚡' },
+        { name: 'React', icon: '⚛️' },
+        { name: 'Angular', icon: '🅰️' },
+        { name: 'React Native', icon: '📱' }
       ]
     },
     database: {
@@ -58,10 +61,10 @@ const Skills = () => {
       icon: '🗄️',
       color: 'from-baby-pink to-light-pink',
       skills: [
-        { name: 'MySQL', level: 85, icon: '🐬' },
-        { name: 'SQL Server', level: 80, icon: '🗄️' },
-        { name: 'Oracle DB', level: 75, icon: '🔶' },
-        { name: 'T-SQL', level: 70, icon: '📊' }
+        { name: 'MySQL', icon: '🐬' },
+        { name: 'SQL Server', icon: '🗄️' },
+        { name: 'Oracle DB', icon: '🔶' },
+        { name: 'T-SQL', icon: '📊' }
       ]
     },
     tools: {
@@ -69,14 +72,14 @@ const Skills = () => {
       icon: '🛠️',
       color: 'from-light-pink to-baby-pink',
       skills: [
-        { name: 'Git/GitHub', level: 85, icon: '🐙' },
-        { name: 'Docker', level: 70, icon: '🐳' },
-        { name: 'MS Azure', level: 65, icon: '☁️' },
-        { name: 'Power BI', level: 80, icon: '📈' },
-        { name: 'MS Project', level: 70, icon: '📋' },
-        { name: 'PostMan', level: 75, icon: '📮' },
-        { name: 'IntelliJ', level: 80, icon: '💡' },
-        { name: 'VS Code', level: 90, icon: '💻' }
+        { name: 'Git/GitHub', icon: '🐙' },
+        { name: 'Docker', icon: '🐳' },
+        { name: 'MS Azure', icon: '☁️' },
+        { name: 'Power BI', icon: '📈' },
+        { name: 'MS Project', icon: '📋' },
+        { name: 'PostMan', icon: '📮' },
+        { name: 'IntelliJ', icon: '💡' },
+        { name: 'VS Code', icon: '💻' }
       ]
     },
     mobile: {
@@ -84,9 +87,9 @@ const Skills = () => {
       icon: '📱',
       color: 'from-baby-pink to-light-pink',
       skills: [
-        { name: 'React Native', level: 70, icon: '📱' },
-        { name: 'Android Studio', level: 65, icon: '🤖' },
-        { name: 'Android SDK', level: 60, icon: '📲' }
+        { name: 'React Native', icon: '📱' },
+        { name: 'Android Studio', icon: '🤖' },
+        { name: 'Android SDK', icon: '📲' }
       ]
     }
   };
@@ -116,6 +119,25 @@ const Skills = () => {
     }
     
     return `/assets/logos/technologies/${techKey}.png`;
+  };
+
+  const getCircleStyles = (skillName) => {
+    const isHovered = hoveredSkill === skillName;
+    
+    // NOUVELLE APPROCHE : Pas de fond, seulement des bordures
+    if (isDark) {
+      return {
+        backgroundColor: 'transparent', // Pas de fond du tout
+        border: isHovered ? '3px solid rgba(248, 180, 209, 0.8)' : '2px solid rgba(248, 180, 209, 0.4)',
+        boxShadow: isHovered ? '0 0 25px rgba(248, 180, 209, 0.5)' : '0 0 10px rgba(248, 180, 209, 0.2)'
+      };
+    } else {
+      return {
+        backgroundColor: 'transparent', // Pas de fond du tout
+        border: isHovered ? '3px solid rgba(248, 180, 209, 0.8)' : '2px solid rgba(248, 180, 209, 0.4)',
+        boxShadow: isHovered ? '0 0 25px rgba(248, 180, 209, 0.5)' : '0 0 10px rgba(248, 180, 209, 0.2)'
+      };
+    }
   };
 
   const categories = Object.keys(skillCategories);
@@ -155,7 +177,7 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* Skills Grid */}
+          {/* Skills Grid - Nouvelle présentation en cercles */}
           <div className="glass-effect rounded-2xl p-8 md:p-12">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-accent-white mb-2">
@@ -166,53 +188,53 @@ const Skills = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Grille responsive avec cercles */}
+            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-8">
               {skillCategories[activeCategory].skills.map((skill, index) => (
                 <div
                   key={index}
-                  className={`glass-effect rounded-xl p-6 hover-lift transition-all duration-500 ${
+                  className={`group relative transition-all duration-500 ${
                     isVisible ? 'animate-fade-in' : 'opacity-0'
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onMouseEnter={() => setHoveredSkill(skill.name)}
+                  onMouseLeave={() => setHoveredSkill(null)}
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 flex items-center justify-center">
-                        <img 
-                          src={getTechLogo(skill.name)}
-                          alt={`Logo ${skill.name}`}
-                          className="w-full h-full object-contain"
-                          onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'inline';
-                          }}
-                        />
-                        <span className="text-2xl hidden">{skill.icon}</span>
-                      </div>
-                      <span className="text-lg font-semibold text-accent-white">
-                        {skill.name}
-                      </span>
-                    </div>
-                    <span className="text-baby-pink font-bold">
-                      {skill.level}%
-                    </span>
-                  </div>
-
-                  {/* Progress Bar */}
-                  <div className="w-full bg-accent-white/10 rounded-full h-2 mb-2">
-                    <div
-                      className={`h-2 rounded-full bg-gradient-to-r ${skillCategories[activeCategory].color} transition-all duration-1000 ease-out`}
-                      style={{ 
-                        width: isVisible ? `${skill.level}%` : '0%',
-                        transitionDelay: `${index * 0.1}s`
+                  {/* Cercle principal */}
+                  <div className="relative w-20 h-20 mx-auto">
+                    {/* Cercle principal - NOUVELLE APPROCHE */}
+                    <div 
+                      className="relative w-full h-full rounded-full flex items-center justify-center transition-all duration-300"
+                      style={{
+                        ...getCircleStyles(skill.name),
+                        transform: hoveredSkill === skill.name ? 'scale(1.1)' : 'scale(1)'
                       }}
-                    ></div>
+                    >
+                      {/* Logo de la technologie */}
+                      {/* Logo de la technologie */}
+<div className="w-10 h-10 flex items-center justify-center">
+  <img 
+    src={getTechLogo(skill.name)}
+    alt={`Logo ${skill.name}`}
+    className={`w-full h-full object-contain filter group-hover:brightness-110 transition-all duration-300 
+      ${skill.name === 'JavaScript' ? 'scale-125' : ''}`}
+    onError={(e) => {
+      e.target.style.display = 'none';
+      e.target.nextSibling.style.display = 'inline';
+    }}
+  />
+  <span className="text-2xl hidden">{skill.icon}</span>
+</div>
+
+                    </div>
+
+                    
                   </div>
 
-                  {/* Skill Level Indicator */}
-                  <div className="flex justify-between text-xs text-accent-white/60">
-                    <span>{t('skills.levels.beginner')}</span>
-                    <span>{t('skills.levels.expert')}</span>
+                  {/* Tooltip au survol */}
+                  <div className={`absolute -top-12 left-1/2 transform -translate-x-1/2 bg-dark-gray/90 backdrop-blur-sm text-accent-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-10 whitespace-nowrap`}>
+                    {skill.name}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-dark-gray/90"></div>
                   </div>
                 </div>
               ))}
